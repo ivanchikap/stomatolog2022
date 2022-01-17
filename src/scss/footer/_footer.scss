@@ -1,0 +1,89 @@
+.footer {
+  background-color: $bg-black;
+  min-height: 100px;
+  padding: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+
+  &__title {
+    font-family: $balsamiq-sans;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  &__nav {
+    margin: 0 -10px;
+  }
+
+  &__nav-link {
+    display: inline-block;
+    font-size: 24px;
+    padding: 3px 6px;
+    transition: all .3s linear;
+    border-radius: 50%;
+    color: darken(#fff, 20%);
+    
+    &:hover {
+      transform: scale(1.1);
+      color: #fff;
+    }
+
+    & + & {
+      margin-left: 4px;
+    }
+
+    @include mobile-large {
+      padding: 2px 4px;
+      font-size: 22px;
+    }
+  }
+  &__nav-link-last {
+    display: inline-block;
+    font-size: 18px;
+    color: darken(#fff, 20%);
+    transition: all .3s linear;
+    width: 90%;
+    &:hover {
+      transform: scale(1.1);
+      color: #fff;
+    }
+    @include mobile-large {
+      font-size: 17px;
+    }
+  }
+  &__phone {
+    display: block;
+    font-size: 18px;
+    padding: 4px 6px;
+    transition: transform .3s linear;
+    color: darken(#fff, 20%);
+    @include tablet {
+      padding: 4px;
+    }
+    @include mobile-large {
+      font-size: 17px;
+    }
+
+    &--second::before {
+      content: '|';
+      margin-right: 12px;
+      @include tablet {
+        margin-right: 8px;
+      }
+      @include mobile-large {
+        display: none;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      color: #fff;
+    }
+  }
+  &__col-4.col-4 {
+    @include mobile-large {
+      margin-top: 0;
+    }
+  }
+}

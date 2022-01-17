@@ -1,0 +1,38 @@
+.roundcard {
+  &__title {
+    font-size: 1rem;
+    font-family: $roboto-slab;
+    text-align: center;
+    margin-bottom: 8px;
+    min-height: 138px;
+    @include mobile {
+      min-height: auto;
+    }
+    
+    &::before {
+      content: '';
+      display: block;
+      border: 2px solid #eee;
+      border-radius: 50%;
+      margin: 0 auto 10px;
+      width: 90px;
+      height: 90px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--documents::before {
+      background-image: url(../img/permits.png);
+    }
+    &--buy::before {
+      background-image: url(../img/buy.jpg);
+    }
+    &--judges::before {
+      background-image: url(../img/judge.jpg);
+    }
+    &--intelect::before {
+      background-image: url(../img/intelect-def.jpg);
+    }
+  }
+}

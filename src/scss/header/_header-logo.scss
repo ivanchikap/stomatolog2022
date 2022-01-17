@@ -1,0 +1,22 @@
+.header-logo {
+  display: flex;
+  align-items: center;
+  max-width: 270px;
+
+  img {
+    width: 44px;
+    margin-right: 12px;
+  }
+
+  &__info {
+    font-family: 'Itim', cursive;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  
+  &__subinfo {
+    display: block;
+    font-size: 18px;
+    text-align: center;
+  }
+}

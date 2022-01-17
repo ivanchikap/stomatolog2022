@@ -1,0 +1,50 @@
+.cart1 {
+   overflow: hidden;
+  text-align: center;
+
+  &__title, &__text {
+    padding: 10px;
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    font-weight: 500;
+    font-family: $roboto-slab;
+    letter-spacing: -1px;
+    @include tablet {
+      font-size: 1.2rem;
+    }
+
+    &::before {
+      display: block;
+      color: $green;
+      font-size: 68px;
+      margin-bottom: 4px;
+    }
+
+    &--professional::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: "\f508";
+    }
+    &--suite::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: "\f4c4";
+    }
+    &--hand::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: "\f4be";
+    }
+  }
+
+  &__text {
+    color: lighten($black, 20%);
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 0 10px 10px 10px;
+  }
+}
+

@@ -1,0 +1,31 @@
+// 1440px - widescreen
+// 1200px - laptop
+// 960px - tablet
+// 720px - mobile-large
+// 480px - mobile
+
+@mixin widescreen {
+  @media screen and (max-width: $widescreen) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin mobile-large {
+  @media screen and (max-width: $mobile-large) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}

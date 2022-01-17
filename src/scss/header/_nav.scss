@@ -1,0 +1,134 @@
+.nav {
+    padding-left: 10px;
+
+    &__close {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 12px;
+        font-size: 24px;
+        z-index: 22;
+        padding: 6px;
+        cursor: pointer;
+        color: lighten($black, 25%);
+        transition: all .3s linear;
+
+        &:hover {
+            color: $black;
+            transform: scale(1.15);
+        }
+    }
+
+    &__btn {
+        display: none;
+        width: 48px;
+        height: 40px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,0.4);
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        cursor: pointer;
+        transition: all .3s linear;
+
+        &:hover,
+        &:focus {
+            box-shadow: 0 0 14px rgba(255, 255, 255, 0.8);
+            background-color: rgba(255,255,255,0.6);
+            transform: scale(1.1);
+        }
+
+        @include tablet {
+            display: flex;
+        }
+    }
+    &__btn-bar {
+        width: 80%;
+        height: 2px;
+        border-radius: 1px;
+        background-color: lighten($black, 25%);
+        transition: all .3s linear;
+    }
+
+    &__list {
+        @include tablet {
+            min-width: 280px;
+            padding: 10px;
+            position: absolute;
+            background-color: transparent;
+            top: 20px;
+            right: 58px;
+            z-index: 10;
+            transform: translateX(800px);
+            transition: transform .6s ease-out;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            border-radius: 6px;
+
+            @include mobile-large {
+                padding: 8px;
+                top: 80px;
+                min-width: 450px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            @include mobile {
+                min-width: 92%;
+                top: 72px;
+            }
+
+            &--active {
+                transform: translateX(0);
+
+                @include mobile-large {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+
+    &__item {
+        @include tablet {
+            display: block;
+        }
+        & + & {
+            margin-left: 16px;
+
+            @include tablet {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__link {
+        padding: 10px;
+        color: $black;
+        font-size: 1.1rem;
+        font-family: $roboto;
+        font-weight: 500;
+        transition: all .3s linear;
+
+        @include mobile-large {
+            padding: 4px 6px;
+            font-size: 1.15rem;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        &:hover, &:focus, &--active {
+            color: $green;
+            transform: scale(1.02);
+        }
+    }
+
+    &--active {
+        &__list {
+            @include mobile-large {
+                display: block;
+            }
+        }
+    }
+}
+

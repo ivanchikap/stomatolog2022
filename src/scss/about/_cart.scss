@@ -1,0 +1,100 @@
+.cart {
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2),
+  0px 1px 1px 0px rgba(0,0,0,0.14),
+  0px 1px 3px 0px rgba(0,0,0,0.12);
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+
+  &__title, &__text {
+    padding: 10px;
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    font-weight: 500;
+    font-family: $roboto-slab;
+    text-align: center;
+    letter-spacing: -1px;
+
+    @include tablet {
+      font-size: 1.2rem;
+    }
+
+    &::before {
+      display: block;
+      text-align: center;
+      color: $green;
+      font-size: 68px;
+      margin-bottom: 4px;
+    }
+
+    &--house::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: "\f966";
+    }
+    &--trophy::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: "\f091";
+    }
+    &--silent::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: "\f026";
+    }
+    &--creative::before {
+      font-family: 'Font Awesome 5 Brands';
+      font-weight: 400;
+      content: "\f4ee";
+    }
+    &--education::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: "\f19c";
+    }
+
+
+
+    &--equipment::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: "\f7d9"
+    }
+    &--earth::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: "\f0ac";
+    }
+    &--carry::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: "\f4ce";
+    }
+    &--tv::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: "\f26c";
+    }
+    &--hand::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: "\f4be";
+    }
+    &--support::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: "\f1e4";
+    }
+  }
+
+  &__text {
+    color: lighten($black, 20%);
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 0 10px 10px 10px;
+  }
+}
+
