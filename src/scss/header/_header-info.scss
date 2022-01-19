@@ -1,0 +1,49 @@
+.header-info {
+  padding: 12px 0;
+  font-size: 12px;
+  line-height: 1.8;
+  color: rgba($black, .7);
+
+  span {
+    white-space: nowrap;
+  }
+
+  &__icon {
+    font-size: 34px;
+    color: $blue;
+
+    &--left {
+      padding-left: 16px;
+    }
+    &--right {
+      padding-right: 16px;
+    }
+  }
+
+  &__tel {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &--value {
+      padding: 0 2px 0 0;
+    }
+
+    i {
+      margin-right: 6px;
+    }
+  }
+
+  &__address {
+    white-space: nowrap;
+    i {
+      margin-right: 6px;
+    }
+  }
+
+  &__bold {
+    font-size: 13px;
+    font-weight: 600;
+    color: #000;
+  }
+}

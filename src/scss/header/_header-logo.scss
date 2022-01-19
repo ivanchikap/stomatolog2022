@@ -2,9 +2,10 @@
   display: flex;
   align-items: center;
   max-width: 270px;
+  color: $black;
 
   img {
-    width: 44px;
+    width: 40px;
     margin-right: 12px;
   }
 
@@ -18,5 +19,6 @@
     display: block;
     font-size: 18px;
     text-align: center;
+    color: rgba($black, .7);
   }
 }
