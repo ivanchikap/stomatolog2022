@@ -28,91 +28,176 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <div class="container text-center">
-                <a href="#" class="nav__item">Про нас</a>
-                <a href="#" class="nav__item">Послуги</a>
-                <a href="#" class="nav__item">Співробітники</a>
-                <a href="#" class="nav__item">Відгуки</a>
-                <a href="#" class="nav__item">Контакти</a>
-            </div>
-            <div class="container">
-                <div class="nav__menu">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
-        </nav>
-        <!-- /header__top-->
-        <div class="header-info">
-            <div class="container">
-                <div class="row d-flex align-items-center justify-content-between">
-                    <div class="col-4">
-                        <div class="header-info__left text-right d-flex ml-auto align-items-center justify-content-end">
-                            <div class="header-info__left-text">
-                                <a class="header-info__tel" href="tel:+380978213937">
-                                    <i class="fas fa-phone-alt"></i>
-                                    <span class="header-info__tel--value header-info__bold text-blue">0978213937</span>
-                                    <span> Сергій</span>
-                                </a>
-                                <a class="header-info__tel" href="tel:+380978213937">
-                                    <i class="fas fa-phone-alt"></i>
-                                    <span class="header-info__tel--value header-info__bold text-blue">0978213937</span>
-                                    <span> Людмила</span>
-                                </a>
-                                <a href="#" class="header-info__address">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>м. Коростень, вул. Героїв Чорнобиля, 4</span>
-                                </a>
-                            </div>
-                            <!--/header-info__left-text-->
-                            <div class="header-info__icon header-info__icon--left">
-                                <i class="fas fa-search-location"></i>
-                            </div>
-                            <!--/header-info__left-icon-->
+    <header class="header" id="header">
+        <div class="header__wrapper">
+            <nav class="nav">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <i class="nav__menu-btn fas fa-bars" id="nav__menu-btn"></i>
+
+                    <div class="header-info__left text-right d-none d-xs-flex align-items-center justify-content-center">
+                        <div class="header-info__left-text">
+                            <a class="header-info__tel" href="tel:+380978213937">
+                                <i class="fas fa-phone-alt"></i>
+                                <span class="header-info__tel--value header-info__bold">0978213937</span>
+
+                            </a>
+                            <a class="header-info__tel" href="tel:+380978213937">
+                                <i class="fas fa-phone-alt"></i>
+                                <span class="header-info__tel--value header-info__bold">0978213937</span>
+
+                            </a>
+                            <a href="#map" class="header-info__address d-sm-none">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>м. Коростень, вул. Героїв Чорнобиля, 4</span>
+                            </a>
                         </div>
-                        <!--/header-info__left-->
+                        <!--/header-info__left-text-->
+                        <div class="header-info__icon header-info__icon--left">
+                            <i class="fas fa-search-location"></i>
+                        </div>
+                        <!--/header-info__left-icon-->
                     </div>
-                    <!--/col-4-->
-                    <div class="col-3">
-                        <a href="#" class="header-logo mx-auto">
-                            <img src="img/logo.svg" alt="logo">
-                            <span class="header-logo__info">
+                    <!--/header-info__left-->
+
+                    <div class="header-info__right align-items-center text-right d-none d-md-flex">
+                        <div class="header-info__icon header-info__icon--left order-1">
+                            <i class="far fa-clock"></i>
+                        </div>
+
+                        <div class="header-info__right-text">
+                            <span  class="header-info__bold d-md-none">Години роботи</span>
+                            <div>
+                                <span>Пн - Сб:</span>
+                                <span  class="header-info__bold text-blue">9:00 - 18:00</span>
+                                <div>Нд: не працюємо</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/header-info__right-->
+                </div>
+                <div class="container text-center nav__desktop">
+                    <a href="#" class="nav__item">Про нас</a>
+                    <a href="#" class="nav__item">Послуги</a>
+                    <a href="#" class="nav__item">Співробітники</a>
+                    <a href="#" class="nav__item">Відгуки</a>
+                    <a href="#" class="nav__item">Контакти</a>
+                </div>
+                <div class="nav__mobile" id="menu">
+                    <div class="nav__overlay" id="overlay"></div>
+                    <nav class="nav__mob-menu d-flex flex-column justify-content-between">
+                        <div class="nav__mob-menu-top">
+                            <i class="far fa-times-circle" id="closeMenu"></i>
+                            <a href="#" class="nav__item nav__item--mobile">Про нас</a>
+                            <a href="#" class="nav__item nav__item--mobile">Послуги</a>
+                            <a href="#" class="nav__item nav__item--mobile">Співробітники</a>
+                            <a href="#" class="nav__item nav__item--mobile">Відгуки</a>
+                            <a href="#" class="nav__item nav__item--mobile">Контакти</a>
+                        </div>
+                        <!--/nav__mob-menu-top-->
+                        <div class="nav__mob-menu-center">
+                            <div class="nav__card">
+                                <div class="nav__card-img">
+                                    <img src="img/sergii.jpg" alt="sergii-avatar">
+                                </div>
+                                <div class="nav__card-info text-center d-flex flex-column justify-content-between">
+                                    <div>
+                                        <span class="ff-balsamic">Прокопенко Сергій</span>
+                                        <span class="nav__card-info-type text-blue">Протезист</span>
+                                    </div>
+                                    <a href="tel:+380978213937" class="btn btn--white btn--small w-90 mx-auto">Записатись</a>
+                                </div>
+                            </div>
+                            <!--/nav__card -->
+                            <div class="nav__card">
+                                <div class="nav__card-img">
+                                    <img src="img/liuda.jpg" alt="liudmyla-avatar">
+                                </div>
+                                <div class="nav__card-info text-center d-flex flex-column justify-content-between">
+                                    <div>
+                                        <span class="ff-balsamic">Прокопенко Людмила</span>
+                                        <span class="nav__card-info-type text-blue">Лікар</span>
+                                    </div>
+                                    <a href="tel:+380672593409" class="btn btn--white btn--small w-90 mx-auto">Записатись</a>
+                                </div>
+                            </div>
+                            <!--/nav__card -->
+                        </div>
+                        <!--/nav__mob-menu-bottom-->
+                        <div class="nav__mob-menu-bottom d-flex justify-content-around align-items-start">
+                            <a class="nav__mob-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="nav__mob-social" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="nav__mob-social" href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </nav>
+                    <!--/nav__mob-menu-->
+                </div>
+                <!--/nav__mobile-->
+            </nav>
+            <!-- /header__top-->
+            <div class="header-info">
+                <div class="container">
+                    <div class="row d-flex align-items-center justify-content-between">
+                        <div class="col-4 order-md-1 col-md-6">
+                            <div class="header-info__left text-right d-flex ml-auto align-items-center justify-content-end">
+                                <div class="header-info__left-text">
+                                    <a class="header-info__tel" href="tel:+380978213937">
+                                        <i class="fas fa-phone-alt"></i>
+                                        <span class="header-info__tel--value header-info__bold">0978213937</span>
+                                        <span> Сергій</span>
+                                    </a>
+                                    <a class="header-info__tel" href="tel:+380978213937">
+                                        <i class="fas fa-phone-alt"></i>
+                                        <span class="header-info__tel--value header-info__bold">0978213937</span>
+                                        <span>Людмила</span>
+                                    </a>
+                                    <a href="#map" class="header-info__address d-sm-none">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>м. Коростень, вул. Героїв Чорнобиля, 4</span>
+                                    </a>
+                                </div>
+                                <!--/header-info__left-text-->
+                                <div class="header-info__icon header-info__icon--left">
+                                    <i class="fas fa-search-location"></i>
+                                </div>
+                                <!--/header-info__left-icon-->
+                            </div>
+                            <!--/header-info__left-->
+                        </div>
+                        <!--/col-4-->
+                        <div class="col-4 col-md-6 col-xs-12">
+                            <a href="#" class="header-logo">
+                                <img src="img/logo.svg" alt="logo">
+                                <span class="header-logo__info">
                         <span>Dr's Prokopenko</span>
                         <span class="header-logo__subinfo">Stomatology</span>
                     </span>
-                        </a>
-                        <!--/ header-logo-->
-                    </div>
-                    <!--/col-4-->
-                    <div class="col-4">
-                        <div class="header-info__right d-flex align-items-center mr-auto text-left">
-                            <div class="header-info__icon header-info__icon--right">
-                                <i class="far fa-clock"></i>
-                            </div>
+                            </a>
+                            <!--/ header-logo-->
+                        </div>
+                        <!--/col-4-->
+                        <div class="col-4 d-md-none">
+                            <div class="header-info__right d-flex align-items-center mr-auto text-left">
+                                <div class="header-info__icon header-info__icon--right">
+                                    <i class="far fa-clock"></i>
+                                </div>
 
-                            <div class="header-info__right-text">
-                                <span  class="header-info__bold">Години роботи</span>
-                                <div>
-                                    <span>Пн - Сб:</span>
-                                    <span  class="header-info__bold text-blue">9:00 - 18:00</span>
-                                    <div>Нд: не працюємо</div>
+                                <div class="header-info__right-text">
+                                    <span  class="header-info__bold">Години роботи</span>
+                                    <div>
+                                        <span>Пн - Сб:</span>
+                                        <span  class="header-info__bold text-blue">9:00 - 18:00</span>
+                                        <div>Нд: не працюємо</div>
+                                    </div>
                                 </div>
                             </div>
+                            <!--/header-info__right-->
                         </div>
-                        <!--/header-info__right-->
+                        <!--/col-4-->
                     </div>
-                    <!--/col-4-->
                 </div>
-
-                
-
-
-
             </div>
-
+            <!--/ header-bottom-->
         </div>
-        <!--/ header-bottom-->
 
         <section class="home-slider owl-carousel">
             <div class="slider-item" style="background-image:url(img/bg_1.jpg);" data-stellar-background-ratio="0.5">
@@ -147,6 +232,9 @@
             <div class="container">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad at consequuntur cum dolore, dolores ducimus eaque est inventore magni maxime natus pariatur perferendis placeat possimus, saepe tempore unde veritatis voluptate?
             </div>
+        </section>
+        <section id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2513.621009826594!2d28.6394059!3d50.9492216!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472bdb12044736b9%3A0x1c14d854b205fab6!2z0LLRg9C70LjRhtGPINCT0LXRgNC-0ZfQsiDQp9C-0YDQvdC-0LHQuNC70Y8sIDQsINCa0L7RgNC-0YHRgtC10L3RjCwg0JbQuNGC0L7QvNC40YDRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgMTE1MTI!5e0!3m2!1sru!2sua!4v1642772393177!5m2!1sru!2sua" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </section>
     </main>
     <!-- /main -->

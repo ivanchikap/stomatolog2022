@@ -1,3 +1,16 @@
 .header {
-  height: 100vh;
+  height: calc(100vh + 132px);
+
+  @include mobile {
+    height: auto;
+  }
+
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: $bg-gray;
+  }
 }

@@ -1,8 +1,18 @@
 .header-logo {
   display: flex;
   align-items: center;
-  max-width: 270px;
+  justify-content: center;
+  width: 270px;
+  max-width: 100%;
   color: $black;
+
+  @include tablet {
+    justify-content: start;
+  }
+
+  @include mobile {
+    justify-content: center;
+  }
 
   img {
     width: 40px;

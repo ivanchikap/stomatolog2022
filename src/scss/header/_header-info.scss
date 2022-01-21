@@ -1,11 +1,30 @@
 .header-info {
-  padding: 12px 0;
-  font-size: 12px;
-  line-height: 1.8;
+  padding: 13px 0;
   color: rgba($black, .7);
+
+  @include mobile {
+    padding: 4px 0;
+  }
 
   span {
     white-space: nowrap;
+  }
+
+  &__right, &__left {
+    font-size: 12px;
+    letter-spacing: normal;
+    line-height: 20px;
+    font-family: 'Roboto', sans-serif;
+
+    @include mobile {
+      line-height: 18px;
+    }
+  }
+
+  &__left {
+    @include mobile {
+      display: none;
+    }
   }
 
   &__icon {
@@ -18,12 +37,17 @@
     &--right {
       padding-right: 16px;
     }
+
+    @include mobile-large {
+      display: none;
+    }
   }
 
   &__tel {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    transition: all .2s ease-in-out;
 
     &--value {
       padding: 0 2px 0 0;
@@ -32,12 +56,24 @@
     i {
       margin-right: 6px;
     }
+
+    &:hover {
+      color: $green;
+
+      .header-info__bold {
+        color: $green;
+      }
+    }
   }
 
   &__address {
     white-space: nowrap;
+    transition: all .2s ease-in-out;
     i {
       margin-right: 6px;
+    }
+    &:hover {
+      color: $green;
     }
   }
 
@@ -45,5 +81,6 @@
     font-size: 13px;
     font-weight: 600;
     color: #000;
+    transition: all .2s ease-in-out;
   }
 }

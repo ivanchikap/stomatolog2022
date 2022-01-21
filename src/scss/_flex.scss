@@ -5,6 +5,17 @@
   display: flex;
 }
 
+@include tablet {
+  .d-md-flex {
+    display: flex !important;
+  }
+}
+@include mobile {
+  .d-xs-flex {
+    display: flex !important;
+  }
+}
+
 .flex-row {
   -webkit-box-orient: horizontal !important;
   -webkit-box-direction: normal !important;

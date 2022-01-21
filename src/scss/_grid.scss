@@ -888,9 +888,6 @@
   .col-xs-12 {
     flex: 0 0 100%;
     max-width: 100%;
-    &:not(:nth-child(-n+1)) {
-      margin-top: 14px;
-    }
   }
   .order-xs-first {
     order: -1;
