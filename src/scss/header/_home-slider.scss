@@ -86,7 +86,7 @@
   }
   &.home-slider {
     position: relative;
-    height: calc(100vh + 132px);
+    //height: calc(100vh + 132px);
     padding-top: 132px;
     z-index: 0;
 
@@ -119,8 +119,12 @@
       }
       .slider-text {
         height: 600px;
+
         @include mobile-large{
           text-align: center;
+        }
+        @include mobile {
+          height: 400px;
         }
 
         .subheading{

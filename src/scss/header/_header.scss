@@ -1,7 +1,9 @@
 .header {
-  height: calc(100vh + 132px);
+  min-height: 100vh;
+  //height: calc(100vh - 78px);
 
   @include mobile {
+    min-height: auto;
     height: auto;
   }
 

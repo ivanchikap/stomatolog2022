@@ -1,0 +1,31 @@
+.card-s {
+  display: flex;
+  padding: 10px;
+
+  &__img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    padding: 14px;
+  }
+
+  &__name {
+    display: block;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    font-family: $balsamiq-sans;
+    white-space: nowrap;
+  }
+}

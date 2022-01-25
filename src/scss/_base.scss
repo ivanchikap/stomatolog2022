@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  color: $black;
+  color: rgba($black, 0.8);
   background-color: $bg-gray;
   font-weight: 400;
   font-size: 15px;
@@ -35,6 +35,30 @@ body {
   padding: 100px 0;
 }
 
+.subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #000000;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 400;
+}
+p {
+  line-height: 1.8;
+}
+p + p {
+  margin-top: 14px;
+}
+p {
+  line-height: 1.4;
+}
+
 .link-decor-on-hover {
   &:hover {
     text-decoration: underline !important;
@@ -46,7 +70,8 @@ body {
 }
 
 .text-white {
-  color: #fff !important;
+  color: rgba(#fff, 0.8) !important;
+
 }
 
 .text-blue {
@@ -145,7 +170,7 @@ strong {
 .btn {
   display: inline-block;
   vertical-align: top;
-  padding: 14px 23px;
+  padding: 14px 20px;
   line-height: 16px;
   font-size: 13px;
   font-weight: 600;
@@ -154,6 +179,7 @@ strong {
   transition: all .3s ease-in-out;
   cursor: pointer;
   border: 2px solid transparent;
+  white-space: nowrap;
 
 
   //@include mobile-large {
@@ -179,7 +205,7 @@ strong {
   color: #fff;
 
   &:hover {
-    background-color: #fff;
+    background-color: transparent;
     border-color: $green;
     color: $black;
   }
@@ -188,6 +214,7 @@ strong {
 .btn--white {
   border-color: $green;
   color: $black;
+  background-color: transparent;
 
   &:hover {
     background-color: $green;

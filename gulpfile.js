@@ -34,7 +34,7 @@ function css() {
 }
 //css, когда будем подключать плагины то нужно чтоб css файлы копировались в build
 function webfonts() {
-    return gulp.src('src/webfonts/*.*')
+    return gulp.src('src/webfonts/**/*.*')
         .pipe(gulp.dest('build/webfonts/'))
 }
 //копирование папки webfonts
