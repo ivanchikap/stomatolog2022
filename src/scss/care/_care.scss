@@ -1,0 +1,11 @@
+.care {
+  padding: 100px 0;
+  background: url(../img/bg_3.jpg) no-repeat 50% -120px / cover;
+
+  @include tablet {
+    background-position-y: -80px;
+  }
+  @include mobile-large {
+    background-position-y: -60px;
+  }
+}

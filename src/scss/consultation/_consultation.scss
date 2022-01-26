@@ -1,9 +1,16 @@
 .consultation {
-  background: url("../img/bg_3.jpg") no-repeat 50% -70px / cover;
+  background: url("../img/bg_3.jpg") no-repeat 50% -120px / cover;
   width: 100%;
   height: 100%;
   position: relative;
   color: rgba(255, 255, 255, 0.8);
+
+  @include tablet {
+    background-position-y: -90px;
+  }
+  @include mobile-large {
+    background-position-y: -50px;
+  }
 
   &__overlay {
     position: absolute;

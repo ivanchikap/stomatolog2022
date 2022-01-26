@@ -1,0 +1,32 @@
+.services {
+
+  .col-3 {
+    &:not(:nth-child(-n+4)) {
+      margin-top: 40px;
+    }
+  }
+
+  @include laptop {
+    .col-lg-4 {
+      &:not(:nth-child(-n+3)) {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  @include tablet {
+    .col-md-6 {
+      &:not(:nth-child(-n+2)) {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  @include mobile-large {
+    .col-sm-12 {
+      &:not(:nth-child(-n+1)) {
+        margin-top: 20px;
+      }
+    }
+  }
+}

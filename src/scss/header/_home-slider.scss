@@ -90,7 +90,7 @@
     padding-top: 132px;
     z-index: 0;
 
-    @include mobile {
+    @include mobile-large {
       height: auto;
       padding-top: 114px;
     }
@@ -105,7 +105,7 @@
       @include laptop{
         background-position: center center !important;
       }
-      @include mobile {
+      @include mobile-large {
         height: 400px;
       }
       .overlay{
@@ -122,8 +122,6 @@
 
         @include mobile-large{
           text-align: center;
-        }
-        @include mobile {
           height: 400px;
         }
 
@@ -138,13 +136,19 @@
           font-size: 50px;
           color: $black;
           line-height: 1.2;
-          font-weight: 300;
           span{
             display: block;
             color: $black;
+            font-family: $nunito;
+          }
+          @include laptop {
+            font-size: 40px;
           }
           @include tablet {
-            font-size: 30px;
+            font-size: 29px;
+          }
+          @include mobile {
+            font-size: 26px;
           }
         }
         .subheading{

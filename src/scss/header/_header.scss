@@ -2,7 +2,7 @@
   min-height: 100vh;
   //height: calc(100vh - 78px);
 
-  @include mobile {
+  @include mobile-large {
     min-height: auto;
     height: auto;
   }

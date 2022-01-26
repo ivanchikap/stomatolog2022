@@ -3,5 +3,14 @@
 
   &__title {
     font-size: 36px;
+    font-family: $nunito;
+
+    @include mobile-large {
+      font-size: 30px;
+      text-align: center;
+    }
+    @include mobile {
+      font-size: 22px;
+    }
   }
 }

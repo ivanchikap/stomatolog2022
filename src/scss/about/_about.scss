@@ -3,11 +3,10 @@
   &__img {
     height: 100%;
     width: auto;
+    background: url("../img/about.jpg") no-repeat 50% top / cover;
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    @include tablet {
+      background-position-x: 80%;
     }
   }
 }

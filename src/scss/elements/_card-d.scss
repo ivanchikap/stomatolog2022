@@ -1,0 +1,82 @@
+.card-d {
+  $root: &;
+  text-align: center;
+
+  &__img {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all .4s ease;
+    }
+  }
+
+  &__links {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 6px;
+    transition: all .4s ease;
+  }
+  &:hover, &:focus {
+    #{$root} {
+      &__links {
+        bottom: 8px;
+      }
+      &__name {
+        color: $blue;
+      }
+      &__img img {
+        transform: scale(1.03);
+      }
+    }
+  }
+
+  &__link {
+    width: 30px;
+    height: 30px;
+    color: $green;
+    background-color: #fff;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .4);
+    i {
+      font-size: 14px;
+    }
+  }
+
+  &__title {
+    margin: 10px 0;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  &__name {
+    font-family: $nunito;
+    font-size: 20px;
+    font-weight: 400;
+    transition: all 0.4s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__type {
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 1px;
+    font-weight: 300;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

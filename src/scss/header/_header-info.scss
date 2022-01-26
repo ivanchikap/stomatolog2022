@@ -1,6 +1,6 @@
 .header-info {
   padding: 13px 0;
-  color: rgba($black, .7);
+  color: rgba($black, .9);
 
   @include mobile {
     padding: 4px 0;
@@ -14,7 +14,6 @@
     font-size: 12px;
     letter-spacing: normal;
     line-height: 20px;
-    font-family: 'Roboto', sans-serif;
 
     @include mobile {
       line-height: 18px;

@@ -1,10 +1,14 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: $montserrat;
   color: rgba($black, 0.8);
   background-color: $bg-gray;
   font-weight: 400;
   font-size: 15px;
   line-height: 1.2;
+
+  @include mobile-large {
+    font-size: 14px;
+  }
 }
 
 .container-fluid {
@@ -32,7 +36,25 @@ body {
 }
 
 .default-section {
-  padding: 100px 0;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @include laptop {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @include tablet {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  @include mobile-large {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .subtitle {
@@ -41,17 +63,33 @@ body {
   display: block;
   margin-bottom: 0;
   text-transform: uppercase;
-  letter-spacing: 2px;
   color: #000000;
+
+  @include mobile-large {
+    text-align: center;
+    font-size: 15px;
+  }
+  @include mobile {
+    font-size: 14px;
+  }
 }
 
 .title {
+  font-family: $nunito;
   font-size: 32px;
   font-weight: 400;
+  line-height: 1.2;
+
+  @include mobile-large {
+    text-align: center;
+    font-size: 28px;
+  }
+  @include mobile {
+    font-size: 22px;
+  }
 }
-p {
-  line-height: 1.8;
-}
+
+
 p + p {
   margin-top: 14px;
 }
@@ -87,8 +125,8 @@ p {
 .ff-balsamic {
   font-family: $balsamiq-sans;
 }
-.ff-roboto-slab {
-  font-family: $roboto-slab;
+.ff-nunito {
+  font-family: $nunito;
 }
 .fz-15 {
   font-size: 15px;
@@ -170,7 +208,7 @@ strong {
 .btn {
   display: inline-block;
   vertical-align: top;
-  padding: 14px 20px;
+  padding: 14px 32px;
   line-height: 16px;
   font-size: 13px;
   font-weight: 600;
@@ -180,6 +218,10 @@ strong {
   cursor: pointer;
   border: 2px solid transparent;
   white-space: nowrap;
+
+  @include  mobile {
+    width: 90%;
+  }
 
 
   //@include mobile-large {
