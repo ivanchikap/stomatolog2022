@@ -1,5 +1,5 @@
 .header {
-  min-height: 100vh;
+  min-height: calc(100vh - 114px);
   //height: calc(100vh - 78px);
 
   @include mobile-large {
