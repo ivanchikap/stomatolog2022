@@ -1,0 +1,38 @@
+table {
+  border-collapse: collapse;
+  display: table;
+  box-sizing: border-box;
+  border-color: grey;
+  text-align: left;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+}
+
+thead {
+  background-color: rgba($blue, 0.5);
+  text-transform: uppercase;
+  font-family: $nunito;
+  color: $black;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba($blue, .15);
+}
+.table-hover tbody tr:hover {
+  background-color: rgba($blue, .4);
+}
+
+.table td, .table th {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+

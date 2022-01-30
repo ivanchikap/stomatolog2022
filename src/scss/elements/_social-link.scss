@@ -1,0 +1,9 @@
+.social-link {
+  font-size: 20px;
+  transition: all .3s ease;
+
+  &:hover {
+    color: $green;
+    transform: translateY(-3px);
+  }
+}

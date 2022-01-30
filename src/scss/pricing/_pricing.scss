@@ -69,14 +69,13 @@
 
   &__list-item {
     width: 25%;
-    padding: 5px;
+    padding: 10px;
     display: flex;
     text-align: center;
     overflow: hidden;
 
     @include mobile-large {
       width: 50%;
-      padding: 10px;
     }
     @include mobile {
       padding: 5px;
@@ -150,7 +149,7 @@
       background-image: url("../img/plomba.jpg");
     }
 
-    &--protez::before {
+    &--koronki::before {
       background-image: url("../img/protez.jpg");
     }
 

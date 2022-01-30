@@ -1,0 +1,14 @@
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, .3);
+  background-color: $bg-black;
+  padding: 24px 0;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, .6);
+  line-height: 1.6;
+
+  &__phone {
+    transition: all .3s ease;
+    &:hover {
+      color: $green;
+    }
+  }
+}
