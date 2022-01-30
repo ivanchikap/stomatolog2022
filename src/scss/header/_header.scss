@@ -1,6 +1,5 @@
 .header {
   min-height: calc(100vh - 114px);
-  //height: calc(100vh - 78px);
 
   @include mobile-large {
     min-height: auto;
@@ -14,5 +13,6 @@
     width: 100%;
     z-index: 10;
     background-color: $bg-gray;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .6);
   }
 }
