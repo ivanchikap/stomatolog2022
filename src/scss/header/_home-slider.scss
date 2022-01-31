@@ -78,9 +78,12 @@
   }
   &.home-slider {
     position: relative;
-    //height: calc(100vh + 132px);
     padding-top: 132px;
     z-index: 0;
+
+    @include tablet {
+      padding-top: 120px;
+    }
 
     @include mobile-large {
       height: auto;

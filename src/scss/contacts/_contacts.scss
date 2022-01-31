@@ -27,6 +27,20 @@
     }
   }
 
+  &__map {
+    height: 300px;
+    @include mobile-large {
+      height: 240px;
+    }
+  }
+
+  &__front-img {
+    height: 300px;
+    @include mobile-large {
+      height: 240px;
+    }
+  }
+
   &__map-overlay {
     position: absolute;
     bottom: 0;
@@ -46,14 +60,23 @@
     }
     i {
       font-size: 14px;
+      color: $green;
     }
     & + & {
       margin-left: 20px;
+      @include mobile {
+        margin-left: 0;
+        margin-top: 10px;
+      }
       &::before {
         content: '|';
-        color: black;
+        color: rgba($black, 0.6);
         font-weight: bolder;
         padding-right: 20px;
+
+        @include mobile {
+          display: none;
+        }
       }
     }
   }

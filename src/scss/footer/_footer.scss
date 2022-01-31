@@ -7,6 +7,12 @@
 
   &__phone {
     transition: all .3s ease;
+    white-space: nowrap;
+
+    & + & {
+      margin-left: 0.5rem;
+    }
+
     &:hover {
       color: $green;
     }

@@ -153,6 +153,16 @@ p {
   }
 }
 
+.d-block {
+  display: block;
+}
+
+@include mobile-large {
+  .d-sm-block {
+    display: block;
+  }
+}
+
 .bg-gray {
   background-color: $bg-gray;
 }
@@ -214,6 +224,11 @@ strong {
 }
 .text-center {
   text-align: center;
+}
+@include tablet {
+  .text-md-center {
+    text-align: center;
+  }
 }
 .text-right {
   text-align: right;

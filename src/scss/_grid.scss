@@ -990,10 +990,6 @@
   .col-sm-6 {
     flex: 0 0 50%;
     max-width: 50%;
-
-    &:not(:nth-child(-n+2)) {
-      margin-top: 20px;
-    }
   }
   .col-sm-7 {
     flex: 0 0 58.333333%;
