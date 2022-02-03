@@ -66,12 +66,6 @@ $(document).ready(function(){
         ]
     });
 
-    $("#tabs2").tabs( {
-            show: { effect: "blind", duration: 900 }
-        }
-    );
-
-
     var carousel = function() {
         $('.home-slider').owlCarousel({
             loop:true,
@@ -136,12 +130,15 @@ $(document).ready(function(){
             let target = e.target;
             let menu = document.getElementById('menu');
             let overlay = document.getElementById('overlay');
+            let navItemsMobile = document.querySelectorAll('.nav__item--mobile');
 
-            if (target === closeMenu || target === overlay) {
+            if (target === closeMenu || target === overlay || target.classList.contains('nav__item--mobile')) {
                 setTimeout(function () {
                     menu.classList.toggle('nav__mobile--active');
                 }, 100);
             }
+
+
         });
     }
 

@@ -17,12 +17,21 @@
   img {
     width: 40px;
     margin-right: 12px;
+
+    @include mobile {
+      width: 30px;
+      margin-right: 8px;
+    }
   }
 
   &__info {
     font-family: 'Itim', cursive;
     font-size: 24px;
     line-height: 1.2;
+
+    @include mobile {
+      font-size: 20px;
+    }
   }
   
   &__subinfo {
@@ -30,5 +39,8 @@
     font-size: 18px;
     text-align: center;
     color: rgba($black, .7);
+    @include mobile {
+      font-size: 16px;
+    }
   }
 }

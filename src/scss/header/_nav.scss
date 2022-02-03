@@ -16,6 +16,7 @@
     display: none;
     font-size: 24px;
     line-height: 46px;
+    padding: 0 12px;
     cursor: pointer;
     transition: color .2s ease-in-out;
 
@@ -114,6 +115,7 @@
 
     .fa-times-circle {
       font-size: 24px;
+      padding: 8px 12px;
       cursor: pointer;
       align-self: flex-end;
       transition: color .2s ease-in-out;
