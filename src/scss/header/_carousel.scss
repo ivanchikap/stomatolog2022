@@ -1,0 +1,92 @@
+.owl-carousel {
+  position: relative;
+  padding-top: 118px;
+  z-index: 0;
+  height: 100vh;
+  
+  &__item {
+    background-position: 50% 15%;
+  }
+
+  .slick-list {
+    height: 100%;
+  }
+  .slick-track {
+    height: 100%;
+  }
+  @include tablet {
+    padding-top: 120px;
+  }
+
+  @include mobile-large {
+    height: auto;
+    padding-top: 114px;
+  }
+
+  &__text {
+    height: 100%;
+  }
+  @include mobile-large{
+    text-align: center;
+    height: 400px;
+  }
+
+  &__subheading{
+    color: $black;
+    font-weight: 700;
+  }
+  .text{
+    position: relative;
+  }
+  h1 {
+    font-size: 50px;
+    color: $black;
+    line-height: 1.2;
+    span{
+      display: block;
+      color: $black;
+      font-family: $nunito;
+    }
+    @include laptop {
+      font-size: 40px;
+    }
+    @include tablet {
+      font-size: 29px;
+    }
+    @include mobile {
+      font-size: 26px;
+    }
+  }
+  .subheading{
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(0,0,0,.8);
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: rgba(0,0,0,.8);
+    &.sub-p{
+      font-weight: 400;
+    }
+    strong{
+      font-weight: 700;
+      a{
+        color: #fff;
+      }
+    }
+  }
+  //BREADCRUBS
+  .breadcrumbs{
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    span{
+      border-bottom: 2px solid rgba(255,255,255,.1);
+      a{
+        color: #fff;
+      }
+    }
+  }
+}

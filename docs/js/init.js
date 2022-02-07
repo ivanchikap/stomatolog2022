@@ -1,37 +1,11 @@
-
 $(document).ready(function(){
-    // .header-nav навигация
-    let nav = $('.nav__list');
-    let btn = $('.nav__btn');
-    let close = $('.nav__close');
-    let logo =  $('.header__logo');
-
-    // .menu-btn - кнопка меню
-    $(btn).click(function () {
-        if (nav.hasClass('nav__list--active')) {
-            nav.removeClass('nav__list--active');
-            close.hide();
-        } else {
-            nav.addClass('nav__list--active');
-            btn.hide();
-            // logo.addClass('mx-sm-auto');
-            close.show();
-        }
-    });
-    $(close).click(function () {
-        nav.removeClass('nav__list--active');
-        setTimeout(function () {
-            btn.show();
-            // logo.removeClass('mx-auto');
-        }, 500);
-    });
 
     $("#tabs2").tabs( {
             show: { effect: "blind", duration: 900 }
         }
     );
 
-    $('.header__slider').slick({
+    /*$('.header__slider').slick({
         dots: true,
         arrows: false,
         infinite: true,
@@ -39,10 +13,10 @@ $(document).ready(function(){
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
-    });
+    });*/
 
 
-    $('.news__slider').slick({
+    /*$('.news__slider').slick({
         dots: true,
         arrows: false,
         infinite: true,
@@ -64,9 +38,21 @@ $(document).ready(function(){
                 }
             }
         ]
+    });*/
+
+    let owl = $('.owl-carousel');
+    owl.slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false
     });
 
-    var carousel = function() {
+   /* var carousel = function() {
         $('.home-slider').owlCarousel({
             loop:true,
             autoplay: true,
@@ -112,7 +98,7 @@ $(document).ready(function(){
         });
 
     };
-    carousel();
+    carousel();*/
 
 
     if (document.getElementById('nav__menu-btn')) {
@@ -137,8 +123,6 @@ $(document).ready(function(){
                     menu.classList.toggle('nav__mobile--active');
                 }, 100);
             }
-
-
         });
     }
 

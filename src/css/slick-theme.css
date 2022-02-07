@@ -116,7 +116,7 @@
 /* Dots */
 .slick-dotted.slick-slider
 {
-    padding-bottom: 30px;
+    /*padding-bottom: 30px;*/
 }
 
 .slick-dots
@@ -178,8 +178,8 @@
 .slick-dots li button:before
 {
     font-family: 'slick';
-    font-size: 48px;
-    line-height: 48px;
+    font-size: 60px;
+    line-height: 60px;
 
     position: absolute;
     top: 0;

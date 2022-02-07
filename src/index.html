@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=yes, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dr's Prokopenko</title>
+    <title>Dr Prokopenko</title>
     <link type="image/png" rel="shortcut icon" href="img/logo.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,8 +21,12 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
 
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    // Add the new slick-theme.css if you want the default styling
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -141,12 +145,12 @@
                                     <a class="header-info__tel" href="tel:+380978213937">
                                         <i class="fas fa-phone-alt"></i>
                                         <span class="header-info__tel--value header-info__bold">0978213937</span>
-                                        <span> Сергій</span>
+                                        <span>Сергій Петрович</span>
                                     </a>
                                     <a class="header-info__tel" href="tel:+380672593409">
                                         <i class="fas fa-phone-alt"></i>
                                         <span class="header-info__tel--value header-info__bold">0672593409</span>
-                                        <span>Людмила</span>
+                                        <span>Людмила Леонідівна</span>
                                     </a>
                                     <a href="#map" class="header-info__address d-sm-none">
                                         <i class="fas fa-map-marker-alt"></i>
@@ -166,7 +170,7 @@
                             <a href="#" class="header-logo">
                                 <img src="img/logo.svg" alt="logo">
                                 <span class="header-logo__info">
-                                    <span>Dr's Prokopenko</span>
+                                    <span>Dr. Prokopenko</span>
                                     <span class="header-logo__subinfo">Stomatology</span>
                                 </span>
                             </a>
@@ -180,11 +184,13 @@
                                 </div>
 
                                 <div class="header-info__right-text">
-                                    <span  class="header-info__bold">Години роботи</span>
+                                    <span  class="header-info__bold">Попередній запис за </span>
                                     <div>
-                                        <span>Пн - Сб:</span>
-                                        <span  class="header-info__bold text-blue">9:00 - 18:00</span>
-                                        <div>Нд: не працюємо</div>
+                                        <a href="tel:+3800672593409"  class="header-info__right-tel header-info__bold text-green">
+                                            <i class="fas fa-phone-alt pr-1"></i>
+                                            <span class="text-upper">телефоном</span>
+                                        </a>
+                                        <div>Консультація безкоштовна</div>
                                     </div>
                                 </div>
                             </div>
@@ -198,19 +204,43 @@
         </div>
         <!--/header__wrapper-->
 
-        <section class="home-slider owl-carousel">
+        <section class="owl-carousel owl-theme" id="carousel">
+            <div class="owl-carousel__item" style="background-image:url(img/bg_1.jpg);">
+                <div class="container h-100">
+                    <div class="row no-gutters owl-carousel__text align-items-center justify-content-end" data-scrollax-parent="true">
+                        <div class="col-5 col-sm-12 offset-7 offset-sm-0 ftco-animate">
+                            <h1 class="mb-4">Клініка <span>чесної стоматології</span></h1>
+                            <p><a href="#services" class="btn btn--green mt-3">Наші послуги</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel__item" style="background-image:url(img/bg_2.jpg);">
+                <div class="container h-100">
+                    <div class="row no-gutters owl-carousel__text align-items-center justify-content-end" data-scrollax-parent="true">
+                        <div class="col-5 col-sm-12 offset-7 offset-sm-0 ftco-animate">
+                            <h1 class="mb-4">Клініка <span>чесної стоматології</span></h1>
+                            <p><a href="#services" class="btn btn--green mt-3">Наші послуги</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/carousel-->
+
+       <!-- <section class="home-slider owl-carousel">
             <div class="slider-item" style="background-image:url(img/bg_1.jpg);" data-stellar-background-ratio="0.5">
                 <div class="container">
                     <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
                         <div class="col-6 col-sm-12 offset-6 offset-sm-0 ftco-animate">
                             <h1 class="mb-4">Допомагаємо Вам <span>Залишатися щасливими</span></h1>
                             <h3 class="subheading">Щодня ми даруємо надію та посмішку пацієнтам, яких обслуговуємо</h3>
-                            <p><a href="#pricing" class="btn btn--green mt-3">Наші ціни</a></p>
+                            <p><a href="#pricing" class="btn btn&#45;&#45;green mt-3">Наші ціни</a></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--/slider-item-->
+            &lt;!&ndash;/slider-item&ndash;&gt;
 
             <div class="slider-item" style="background-image:url(img/bg_2.jpg);">
                 <div class="container">
@@ -218,13 +248,13 @@
                         <div class="col-6 col-sm-12 offset-6 offset-sm-0 ftco-animate">
                             <h1 class="mb-4">Посмішка справляє <br>Незабутнє враження</h1>
                             <h3 class="subheading">Ваше здоров’я – наш головний пріоритет із комплексною медичною допомогою за доступною ціною.</h3>
-                            <p><a href="#pricing" class="btn btn--green mt-3">Наші ціни</a></p>
+                            <p><a href="#pricing" class="btn btn&#45;&#45;green mt-3">Наші ціни</a></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--/slider-item-->
-        </section>
+            &lt;!&ndash;/slider-item&ndash;&gt;
+        </section>-->
         <!--/home-slider-->
     </header>
     <!-- / header -->
@@ -240,7 +270,7 @@
                     <div class="col-7 col-sm-12 default-section">
                         <header class="about__header">
                             <h5 class="subtitle mb-2">Ласкаво просимо!</h5>
-                            <h2 class="title mb-4">Про клініку Dr's Prokopenko</h2>
+                            <h2 class="title mb-4">Про клініку Dr. Prokopenko</h2>
                         </header>
                         <main class="about__main">
                             <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquam aperiam culpa cumque deleniti, dolor dolorem error est hic illo molestias natus officia, pariatur ratione reiciendis similique sint voluptate! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium aliquam assumenda eius esse eveniet explicabo id ipsam, itaque magnam minus nobis officiis quisquam quod reprehenderit soluta veniam vero voluptatum?
@@ -758,8 +788,6 @@
     <script src="js/jquery-ui.min.js"></script>
 
     <script src="js/slick.min.js"></script>
-
-    <script src="js/owl.carousel.min.js"></script>
 
     <!--<script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCPhKlY7JOdaP4gtII-XJhWOVlNanRbIvk&callback=initMap"-->
     <!--        async defer></script>-->

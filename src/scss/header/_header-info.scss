@@ -109,4 +109,11 @@
     color: #000;
     transition: all .2s ease-in-out;
   }
+
+  &__right-tel {
+    transition: all .3s ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 }
