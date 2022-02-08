@@ -1317,6 +1317,12 @@
     flex: 0 0 100%;
     max-width: 100%;
   }
+  .pr-xs-0 {
+    padding-right: 0 !important
+  }
+  .pr-xs-1 {
+    padding-right: 0.25rem !important
+  }
   .order-xs-first {
     order: -1;
   }
@@ -1422,5 +1428,8 @@
   }
   .mt-xs-0 {
     margin-top: 0 !important;
+  }
+  .d-xs-none {
+    display: none;
   }
 }

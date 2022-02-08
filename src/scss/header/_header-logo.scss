@@ -18,7 +18,7 @@
     width: 40px;
     margin-right: 12px;
 
-    @include mobile {
+    @include mobile-large {
       width: 30px;
       margin-right: 8px;
     }
@@ -30,7 +30,7 @@
     font-size: 24px;
     line-height: 1.2;
 
-    @include mobile {
+    @include mobile-large {
       font-size: 20px;
     }
   }

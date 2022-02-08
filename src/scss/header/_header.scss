@@ -1,7 +1,7 @@
 .header {
   min-height: calc(100vh - 114px);
 
-  @include mobile-large {
+  @include tablet {
     min-height: auto;
     height: auto;
   }

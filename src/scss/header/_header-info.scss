@@ -25,7 +25,7 @@
 
   &__left {
     @include mobile {
-      display: none;
+      //display: none;
     }
   }
 
@@ -112,8 +112,19 @@
 
   &__right-tel {
     transition: all .3s ease-in-out;
+    @include mobile {
+      font-size: 12px;
+    }
     &:hover {
       transform: scale(1.05);
+    }
+  }
+
+  &__span {
+    font-size: 15px;
+    @include mobile {
+      font-size: 13px;
+      letter-spacing: -0.5px;
     }
   }
 }

@@ -1,18 +1,12 @@
 .services {
 
-  .col-3 {
-    &:not(:nth-child(-n+4)) {
+
+  .col-4 {
+    &:not(:nth-child(-n+3)) {
       margin-top: 40px;
     }
   }
 
-  @include laptop {
-    .col-lg-4 {
-      &:not(:nth-child(-n+3)) {
-        margin-top: 40px;
-      }
-    }
-  }
 
   @include tablet {
     .col-md-6 {

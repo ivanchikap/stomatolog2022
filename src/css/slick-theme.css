@@ -119,20 +119,31 @@
     /*padding-bottom: 30px;*/
 }
 
-.slick-dots
-{
+.slick-dots{
     position: absolute;
-    bottom: 60px;
-
+    bottom: 50px;
     display: block;
-
     width: 100%;
     padding: 0;
     margin: 0;
-
     list-style: none;
-
     text-align: center;
+}
+
+@media screen and (max-width: 960px) {
+    .slick-dots{
+        bottom: 40px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .slick-dots{
+        bottom: 30px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .slick-dots{
+        bottom: 26px;
+    }
 }
 .slick-dots li
 {
