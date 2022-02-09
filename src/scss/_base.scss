@@ -164,6 +164,11 @@ p {
   }
 }
 
+.ftco-animate {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .bg-gray {
   background-color: $bg-gray;
 }

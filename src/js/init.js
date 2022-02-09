@@ -4,10 +4,13 @@ $(document).ready(function(){
         responsive: true,
         parallaxBackgrounds: true,
         parallaxElements: true,
+        verticalOffset: 80,
         horizontalScrolling: false,
         hideDistantElements: false,
         scrollProperty: 'scroll'
     });
+
+    //Прокрутка бекграунда разом зі скролом. Необхідно stellar.min.js і наче jquery-migrate.min.js
 
     $("#tabs2").tabs( {
             show: { effect: "blind", duration: 900 }
@@ -22,58 +25,10 @@ $(document).ready(function(){
         fade: true,
         cssEase: 'linear',
         autoplay: true,
-        autoplaySpeed: 800,
+        autoplaySpeed: 900,
         arrows: false
     });
-
-   /* var carousel = function() {
-        $('.home-slider').owlCarousel({
-            loop:true,
-            autoplay: true,
-            margin:0,
-            animateOut: 'fadeOut',
-            animateIn: 'fadeIn',
-            nav:false,
-            autoplayHoverPause: false,
-            items: 1,
-            navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:1
-                },
-                1000:{
-                    items:1
-                }
-            }
-        });
-        $('.carousel-testimony').owlCarousel({
-            autoplay: true,
-            center: true,
-            loop: true,
-            items:1,
-            margin: 30,
-            stagePadding: 0,
-            nav: false,
-            navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
-            responsive:{
-                0:{
-                    items: 1
-                },
-                600:{
-                    items: 2
-                },
-                1000:{
-                    items: 3
-                }
-            }
-        });
-
-    };
-    carousel();*/
-
+    //slick carousel в хедері
 
     if (document.getElementById('nav__menu-btn')) {
         let navMenuBtn = document.getElementById('nav__menu-btn');
@@ -100,13 +55,66 @@ $(document).ready(function(){
         });
     }
 
+    var contentWayPoint = function() {
+        console.log('ru');
+        var i = 0;
+        $('.ftco-animate').waypoint( function( direction ) {
 
-    // let menuBtn = document.getElementById('nav__btn');
+            if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
+
+                i++;
+
+                $(this.element).addClass('item-animate');
+                setTimeout(function(){
+
+                    $('body .ftco-animate.item-animate').each(function(k){
+                        var el = $(this);
+                        setTimeout( function () {
+                            var effect = el.data('animate-effect');
+                            if ( effect === 'fadeIn') {
+                                el.addClass('fadeIn ftco-animated');
+                            } else if ( effect === 'fadeInLeft') {
+                                el.addClass('fadeInLeft ftco-animated');
+                            } else if ( effect === 'fadeInRight') {
+                                el.addClass('fadeInRight ftco-animated');
+                            } else {
+                                el.addClass('fadeInUp ftco-animated');
+                            }
+                            el.removeClass('item-animate');
+                        },  k * 50, 'easeInOutExpo' );
+                    });
+
+                }, 100);
+
+            }
+
+        } , { offset: '95%' } );
+    };
+    contentWayPoint();
+
+    //анімація при прокрутці - працює разом з
+    // jquery-waypoints.min.js, animate.css та в base .ftco-animate { opacity: 0, visibility: hidden;}
     //
-    // menuBtn.addEventListener("click", function() {
-    //     let menu = document.getElementById('nav__nav');
-    //     setTimeout(function () {
-    //         menu.classList.toggle('d-sm-none');
-    //     }, 100)
-    // });
+
+    $(function(){
+        $('a[href^="#"]').on('click', function(event) {
+            // отменяем стандартное действие
+            event.preventDefault();
+
+            var sc = $(this).attr("href"),
+                dn = $(sc).offset().top;
+            /*
+            * sc - в переменную заносим информацию о том, к какому блоку надо перейти
+            * dn - определяем положение блока на странице
+            */
+
+            $('html, body').animate({scrollTop: dn}, 500);
+
+            /*
+            * 1000 скорость перехода в миллисекундах
+            */
+        });
+    });
+
+    //Плавна прокрутка по якорям сайту
 });
