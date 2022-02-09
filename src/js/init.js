@@ -1,5 +1,14 @@
 $(document).ready(function(){
 
+    $(window).stellar({
+        responsive: true,
+        parallaxBackgrounds: true,
+        parallaxElements: true,
+        horizontalScrolling: false,
+        hideDistantElements: false,
+        scrollProperty: 'scroll'
+    });
+
     $("#tabs2").tabs( {
             show: { effect: "blind", duration: 900 }
         }
