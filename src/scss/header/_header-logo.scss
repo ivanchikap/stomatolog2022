@@ -22,6 +22,10 @@
       width: 30px;
       margin-right: 8px;
     }
+    @include mobile {
+      width: 28px;
+      margin-right: 6px;
+    }
   }
 
   &__info {
@@ -32,6 +36,9 @@
 
     @include mobile-large {
       font-size: 20px;
+    }
+    @include mobile {
+      font-size: 19px;
     }
   }
   

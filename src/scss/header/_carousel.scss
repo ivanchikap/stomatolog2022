@@ -16,7 +16,13 @@
   }
   
   &__item {
-    background-position: 50% 15%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 5%;
+    @include mobile-large {
+      background-position: 50% 0;
+    }
+
   }
 
   .slick-list {
@@ -42,6 +48,7 @@
     font-size: 62px;
     color: $black;
     line-height: 1.2;
+    font-weight: 500;
     span{
       display: block;
       color: $black;
