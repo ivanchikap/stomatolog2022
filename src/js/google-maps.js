@@ -2,12 +2,12 @@
 // When the window has finished loading create our google map below
 // https://developers.google.com/maps/documentation/
 
-// google.maps.event.addDomListener(window, 'load', initMap);
+google.maps.event.addDomListener(window, 'load', initMap);
 
-// window.addEventListener('load', initMap);
+window.addEventListener('load', initMap);
 
 function initMap() {
-// Basic options for a simple Google Map
+    // Basic options for a simple Google Map
 
     // Get the HTML DOM element that will contain your map
     // We are using a div with id="map" seen below in the <body>
@@ -18,7 +18,8 @@ function initMap() {
 
 
         // Add your coordinates. How to know coordinates: https://support.google.com/maps/answer/18539?hl=en
-        let myLatlng = new google.maps.LatLng(49.982521, 36.246361);
+        let myLatlng = new google.maps.LatLng( 50.94935205143196, 28.640437328381026);
+
 
         // Add your company name and some text about company
         let maptooltipbold = `Dr's Prokopenko`;
@@ -31,7 +32,7 @@ function initMap() {
         let mapOptions = {
 
             // How zoomed in you want the map to start at (always required)
-            zoom: 16,
+            zoom: 18,
 
             //scroll zoom false
             scrollwheel: false,
@@ -43,18 +44,18 @@ function initMap() {
 
             // How you would like to style the map.
             // This is where you would paste any style found on Snazzy Maps.
-            styles: [{featureType:"landscape",
-                stylers:[{saturation:-100},{lightness:65},{visibility:"on"}]},{featureType:"poi",
-                stylers:[{saturation:-100},{lightness:51},{visibility:"simplified"}]},{featureType:"road.highway",
-                stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"road.arterial",
-                stylers:[{saturation:-100},{lightness:30},{visibility:"on"}]},{featureType:"road.local",
-                stylers:[{saturation:-100},{lightness:40},{visibility:"on"}]},{featureType:"transit",
-                stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"administrative.province",
-                stylers:[{visibility:"off"}]/**/},{featureType:"administrative.locality",
-                stylers:[{visibility:"off"}]},{featureType:"administrative.neighborhood",
-                stylers:[{visibility:"on"}]/**/},{featureType:"water",elementType:"labels",
-                stylers:[{visibility:"on"},{lightness:-25},{saturation:-100}]},{featureType:"water",elementType:"geometry",
-                stylers:[{hue:"#ffff00"},{lightness:-25},{saturation:-97}]}]
+            // styles: [{featureType:"landscape",
+            //     stylers:[{saturation:-100},{lightness:65},{visibility:"on"}]},{featureType:"poi",
+            //     stylers:[{saturation:-100},{lightness:51},{visibility:"simplified"}]},{featureType:"road.highway",
+            //     stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"road.arterial",
+            //     stylers:[{saturation:-100},{lightness:30},{visibility:"on"}]},{featureType:"road.local",
+            //     stylers:[{saturation:-100},{lightness:40},{visibility:"on"}]},{featureType:"transit",
+            //     stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"administrative.province",
+            //     stylers:[{visibility:"off"}]/**/},{featureType:"administrative.locality",
+            //     stylers:[{visibility:"off"}]},{featureType:"administrative.neighborhood",
+            //     stylers:[{visibility:"on"}]/**/},{featureType:"water",elementType:"labels",
+            //     stylers:[{visibility:"on"},{lightness:-25},{saturation:-100}]},{featureType:"water",elementType:"geometry",
+            //     stylers:[{hue:"#ffff00"},{lightness:-25},{saturation:-97}]}]
         };
 
 
@@ -64,7 +65,7 @@ function initMap() {
         let map = new google.maps.Map(mapElement, mapOptions);
 
         // Image of toogle
-        let image = 'img/logo.png';
+        let image = 'img/thui.png';
 
         // Div's of toogle
         let content = document.createElement('div');
@@ -88,7 +89,4 @@ function initMap() {
             infowindow.open(map, marker);
         });
 	}
-	
-
-
 }

@@ -49,6 +49,7 @@
     width: 100%;
     background-color: rgba($black, .8);
     transition: all .2s ease;
+    z-index: 10;
   }
 
   &__phone {

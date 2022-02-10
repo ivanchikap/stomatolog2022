@@ -6,6 +6,9 @@
 .container-fluid {
   width: 100%;
   padding: 0 15px;
+  @include mobile {
+    padding: 0 10px;
+  }
 }
 .row {
   display: flex;

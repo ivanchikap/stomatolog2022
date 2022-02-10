@@ -19,7 +19,7 @@ $(document).ready(function(){
 
     let owl = $('.owl-carousel');
     owl.slick({
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         fade: true,
@@ -56,7 +56,6 @@ $(document).ready(function(){
     }
 
     var contentWayPoint = function() {
-        console.log('ru');
         var i = 0;
         $('.ftco-animate').waypoint( function( direction ) {
 
