@@ -175,6 +175,12 @@ p {
 .bg-black {
   background-color: $bg-black;
 }
+.ml--15 {
+  margin-left: -15px !important;
+}
+.mr--15 {
+  margin-right: -15px !important;
+}
 
 .text-white {
   color: rgba(#fff, 0.8) !important;
